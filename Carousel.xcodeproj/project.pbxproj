@@ -13,6 +13,11 @@
 		0459ADAA2646642300E7DBDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0459ADA82646642300E7DBDC /* Main.storyboard */; };
 		0459ADAC2646642600E7DBDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0459ADAB2646642600E7DBDC /* Assets.xcassets */; };
 		0459ADAF2646642600E7DBDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0459ADAD2646642600E7DBDC /* LaunchScreen.storyboard */; };
+		0459ADBE26466DED00E7DBDC /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459ADBD26466DED00E7DBDC /* CollectionTableViewCell.swift */; };
+		0459ADC126467A6500E7DBDC /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459ADC026467A6500E7DBDC /* TileCollectionViewCell.swift */; };
+		0459ADC326468EBD00E7DBDC /* CollectionTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459ADC226468EBD00E7DBDC /* CollectionTableViewCellViewModel.swift */; };
+		0459ADC526468ED700E7DBDC /* TileCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459ADC426468ED700E7DBDC /* TileCollectionViewCellViewModel.swift */; };
+		0459ADC826468FBC00E7DBDC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459ADC726468FBC00E7DBDC /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		0459ADAB2646642600E7DBDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0459ADAE2646642600E7DBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0459ADB02646642600E7DBDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0459ADBD26466DED00E7DBDC /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		0459ADC026467A6500E7DBDC /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
+		0459ADC226468EBD00E7DBDC /* CollectionTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		0459ADC426468ED700E7DBDC /* TileCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		0459ADC726468FBC00E7DBDC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 			children = (
 				0459ADB62646647600E7DBDC /* Application Delegate */,
 				0459ADB8264664B000E7DBDC /* View Controllers */,
+				0459ADC626468F9A00E7DBDC /* Extensions */,
 				0459ADB72646649700E7DBDC /* Storyboards */,
 				0459ADB9264664C000E7DBDC /* Resources */,
 				0459ADBA264664D400E7DBDC /* Supporting Files */,
@@ -86,7 +97,8 @@
 		0459ADB8264664B000E7DBDC /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0459ADA62646642300E7DBDC /* RootViewController.swift */,
+				0459ADBC26466D9F00E7DBDC /* Collection View */,
+				0459ADBB26466D8800E7DBDC /* Root View */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -105,6 +117,41 @@
 				0459ADB02646642600E7DBDC /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0459ADBB26466D8800E7DBDC /* Root View */ = {
+			isa = PBXGroup;
+			children = (
+				0459ADA62646642300E7DBDC /* RootViewController.swift */,
+			);
+			path = "Root View";
+			sourceTree = "<group>";
+		};
+		0459ADBC26466D9F00E7DBDC /* Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				0459ADBF26467A4A00E7DBDC /* Collection View Cell */,
+				0459ADBD26466DED00E7DBDC /* CollectionTableViewCell.swift */,
+				0459ADC226468EBD00E7DBDC /* CollectionTableViewCellViewModel.swift */,
+			);
+			path = "Collection View";
+			sourceTree = "<group>";
+		};
+		0459ADBF26467A4A00E7DBDC /* Collection View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0459ADC026467A6500E7DBDC /* TileCollectionViewCell.swift */,
+				0459ADC426468ED700E7DBDC /* TileCollectionViewCellViewModel.swift */,
+			);
+			path = "Collection View Cell";
+			sourceTree = "<group>";
+		};
+		0459ADC626468F9A00E7DBDC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0459ADC726468FBC00E7DBDC /* UIColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +225,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0459ADA72646642300E7DBDC /* RootViewController.swift in Sources */,
+				0459ADC126467A6500E7DBDC /* TileCollectionViewCell.swift in Sources */,
+				0459ADC326468EBD00E7DBDC /* CollectionTableViewCellViewModel.swift in Sources */,
 				0459ADA32646642300E7DBDC /* AppDelegate.swift in Sources */,
 				0459ADA52646642300E7DBDC /* SceneDelegate.swift in Sources */,
+				0459ADC826468FBC00E7DBDC /* UIColor.swift in Sources */,
+				0459ADC526468ED700E7DBDC /* TileCollectionViewCellViewModel.swift in Sources */,
+				0459ADBE26466DED00E7DBDC /* CollectionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
